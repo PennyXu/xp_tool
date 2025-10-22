@@ -43,11 +43,6 @@ class OSSHandler:
                 print(f"错误: 本地文件 {local_file_path} 不存在")
                 return False
                 
-            # 检查文件是否为Excel文件
-            if not (local_file_path.endswith('.xlsx') or local_file_path.endswith('.xls')):
-                print(f"错误: {local_file_path} 不是Excel文件")
-                return False
-                
             # 上传文件
             self.bucket.put_object_from_file(oss_file_path, local_file_path)
             print(f"文件 {local_file_path} 已成功上传至OSS: {oss_file_path}")
