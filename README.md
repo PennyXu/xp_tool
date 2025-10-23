@@ -1,8 +1,4 @@
-以下是将您的 AsyncCallAI 库与 RAG Knowledge Base & AI Toolkit 整合的完整 README：
-
-# AsyncCallAI & RAG Knowledge Base - 智能AI对话与知识库系统
-
-一个功能强大的Python工具包，集成了异步AI对话调用、RAG（检索增强生成）知识库构建、云存储操作和数据处理等多种功能。特别适用于需要结合外部知识进行智能对话和数据管理的场景。
+一个Python工具包，集成了异步AI对话调用、RAG（检索增强生成）知识库构建、云存储操作和数据处理等多种功能。特别适用于需要结合外部知识进行智能对话和数据管理的场景。
 
 ## 🚀 核心功能
 
