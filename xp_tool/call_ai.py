@@ -7,8 +7,7 @@ from .rag_knowledge_base import P_RAGRetriever
 
 class CallAi:
     """
-    基于OpenAI兼容接口的AI调用类，支持RAG（检索增强生成）功能，
-    可加载知识库上下文辅助回答，并提供prompt模板的持久化存储。
+    基于OpenAI兼容接口的AI调用类，支持RAG（检索增强生成）功能。
     适用于需要结合外部知识（如数据库Schema、业务文档）的对话场景。
     """
     def __init__(self,api_key,base_url,model=None,name=None):
