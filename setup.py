@@ -18,7 +18,7 @@ URL = ''
 EMAIL = 'xupeng23456@126.com'
 AUTHOR = 'XuPeng'
 REQUIRES_PYTHON = '>=3.10.0'
-VERSION = '1.4'
+VERSION = '2.0'
 
 # What packages are required for this module to be executed?
 REQUIRED = [
