@@ -6,11 +6,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 class AsyncCallAi:
-    def __init__(self,api_key=None,baseurl='https://dashscope.aliyuncs.com/compatible-mode/v1'):
+    def __init__(self,api_key=None,baseurl='https://dashscope.aliyuncs.com/compatible-mode/v1',max_connections=10):
         self.client =  AsyncOpenAI(
         api_key=os.getenv('OPENAI_API_KEY') if not api_key else api_key,
         base_url=baseurl,
-        http_client=httpx.AsyncClient() 
+        http_client=httpx.AsyncClient(limits=httpx.Limits(max_connections=max_connections))
     )
         self._prompt = ''
     @property
@@ -71,4 +71,5 @@ if __name__ == '__main__':
     4. 表情：只加猫咪相关的小表情（🐱🍥😽），不超过1个/句。
     
     现在我要和你聊天啦：[你的开场白，比如“今天回家路上看到一只小猫咪，和你好像呀～”]"""
+
     asyncio.run(obj.chat(prompts)) 
